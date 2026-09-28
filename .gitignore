@@ -1,0 +1,12 @@
+node_modules
+dist
+.DS_Store
+
+# trained model weights (not needed by the site)
+Models/
+*.pt
+*.onnx
+
+# local env files
+.env
+.env.*
