@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { interests } from '../data.js';
-import { WaveRun, CubeSolve } from './Art.jsx';
+import { WaveRun, CubeSolve, PianoPlay } from './Art.jsx';
 
 const ICONS = {
   golf: <><path d="M9 21V3l8 4-8 4" /><path d="M4 21h14" /></>,
@@ -62,6 +62,7 @@ function InterestCard({ it }) {
       {on && <Detect label={it.label} />}
       {on && it.anim === 'wave' && <WaveRun />}
       {on && it.anim === 'cube' && <CubeSolve />}
+      {on && it.anim === 'piano' && <PianoPlay />}
       <div className="interest-head">
         <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           {ICONS[it.icon]}

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 // Project artwork. `c` holds colors for the current view (edge vs rgb).
 
@@ -140,6 +140,51 @@ export function CubeSolve() {
 <g><polygon points="0.0,-30.0 8.7,-25.0 0.0,-20.0 -8.7,-25.0" fill="#ECE9E0" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#2E62C9;#C8412F;#3A9D5D;#ECE9E0" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="26.0,15.0 17.3,20.0 17.3,10.0 26.0,5.0" fill="#C8412F" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#F2C94C;#ECE9E0;#ECE9E0;#C8412F" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="-26.0,15.0 -17.3,20.0 -17.3,10.0 -26.0,5.0" fill="#2E62C9" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#E5784A;#ECE9E0;#2E62C9;#2E62C9" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="-8.7,-25.0 0.0,-20.0 -8.7,-15.0 -17.3,-20.0" fill="#ECE9E0" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#E5784A;#ECE9E0;#E5784A;#ECE9E0" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="26.0,5.0 17.3,10.0 17.3,0.0 26.0,-5.0" fill="#C8412F" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#C8412F;#ECE9E0;#ECE9E0;#C8412F" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="-26.0,5.0 -17.3,10.0 -17.3,0.0 -26.0,-5.0" fill="#2E62C9" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#3A9D5D;#3A9D5D;#ECE9E0;#2E62C9" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="-17.3,-20.0 -8.7,-15.0 -17.3,-10.0 -26.0,-15.0" fill="#ECE9E0" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#C8412F;#ECE9E0;#E5784A;#ECE9E0" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="26.0,-5.0 17.3,0.0 17.3,-10.0 26.0,-15.0" fill="#C8412F" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#3A9D5D;#ECE9E0;#E5784A;#C8412F" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="-26.0,-5.0 -17.3,0.0 -17.3,-10.0 -26.0,-15.0" fill="#2E62C9" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#ECE9E0;#C8412F;#F2C94C;#2E62C9" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="8.7,-25.0 17.3,-20.0 8.7,-15.0 0.0,-20.0" fill="#ECE9E0" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#F2C94C;#E5784A;#ECE9E0;#ECE9E0" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="17.3,20.0 8.7,25.0 8.7,15.0 17.3,10.0" fill="#C8412F" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#E5784A;#E5784A;#3A9D5D;#C8412F" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="-17.3,20.0 -8.7,25.0 -8.7,15.0 -17.3,10.0" fill="#2E62C9" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#ECE9E0;#C8412F;#ECE9E0;#2E62C9" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="0.0,-20.0 8.7,-15.0 0.0,-10.0 -8.7,-15.0" fill="#ECE9E0" stroke="#0D0E0C" strokeWidth="1.2"></polygon><polygon points="17.3,10.0 8.7,15.0 8.7,5.0 17.3,0.0" fill="#C8412F" stroke="#0D0E0C" strokeWidth="1.2"></polygon><polygon points="-17.3,10.0 -8.7,15.0 -8.7,5.0 -17.3,0.0" fill="#2E62C9" stroke="#0D0E0C" strokeWidth="1.2"></polygon><polygon points="-8.7,-15.0 0.0,-10.0 -8.7,-5.0 -17.3,-10.0" fill="#ECE9E0" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#E5784A;#C8412F;#2E62C9;#ECE9E0" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="17.3,0.0 8.7,5.0 8.7,-5.0 17.3,-10.0" fill="#C8412F" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#3A9D5D;#C8412F;#E5784A;#C8412F" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="-17.3,0.0 -8.7,5.0 -8.7,-5.0 -17.3,-10.0" fill="#2E62C9" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#ECE9E0;#E5784A;#2E62C9;#2E62C9" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="17.3,-20.0 26.0,-15.0 17.3,-10.0 8.7,-15.0" fill="#ECE9E0" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#E5784A;#F2C94C;#C8412F;#ECE9E0" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="8.7,25.0 0.0,30.0 0.0,20.0 8.7,15.0" fill="#C8412F" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#ECE9E0;#E5784A;#E5784A;#C8412F" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="-8.7,25.0 0.0,30.0 0.0,20.0 -8.7,15.0" fill="#2E62C9" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#F2C94C;#C8412F;#2E62C9;#2E62C9" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="8.7,-15.0 17.3,-10.0 8.7,-5.0 0.0,-10.0" fill="#ECE9E0" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#ECE9E0;#E5784A;#F2C94C;#ECE9E0" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="8.7,15.0 0.0,20.0 0.0,10.0 8.7,5.0" fill="#C8412F" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#ECE9E0;#E5784A;#ECE9E0;#C8412F" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="-8.7,15.0 0.0,20.0 0.0,10.0 -8.7,5.0" fill="#2E62C9" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#E5784A;#C8412F;#3A9D5D;#2E62C9" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="0.0,-10.0 8.7,-5.0 0.0,0.0 -8.7,-5.0" fill="#ECE9E0" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#F2C94C;#E5784A;#3A9D5D;#ECE9E0" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="8.7,5.0 0.0,10.0 0.0,0.0 8.7,-5.0" fill="#C8412F" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#2E62C9;#3A9D5D;#E5784A;#C8412F" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><polygon points="-8.7,5.0 0.0,10.0 0.0,0.0 -8.7,-5.0" fill="#2E62C9" stroke="#0D0E0C" strokeWidth="1.2"><animate attributeName="fill" values="#3A9D5D;#2E62C9;#2E62C9;#2E62C9" keyTimes="0;0.3;0.6;1" dur="1.4s" calcMode="discrete" fill="freeze"></animate></polygon><animateTransform attributeName="transform" type="rotate" values="0;-8;6;-4;0" keyTimes="0;0.3;0.6;0.85;1" dur="1.4s" fill="freeze"></animateTransform></g>
 <text x="0" y="40" textAnchor="middle" fontFamily="IBM Plex Mono, monospace" fontSize="7" fill="#5BC27A" opacity="0">solved<animate attributeName="opacity" values="0;0;1" keyTimes="0;0.95;1" dur="1.5s" fill="freeze"></animate></text>
 <animate attributeName="opacity" from="1" to="0" begin={`${CUBE_SOLVE_S + CUBE_FADE_DELAY_S}s`} dur={`${CUBE_FADE_S}s`} fill="freeze"></animate></g>
+</svg>
+  );
+}
+
+// Für Elise opening, as [note, length in eighth notes]. Played once per hover on a small
+// keyboard (C4–E5), each key glowing while its note sounds. Visual only, no audio.
+const FUR_ELISE = [
+  ['E5', 1], ['D#5', 1], ['E5', 1], ['D#5', 1], ['E5', 1], ['B4', 1], ['D5', 1], ['C5', 1], ['A4', 3],
+  ['C4', 1], ['E4', 1], ['A4', 1], ['B4', 3],
+  ['E4', 1], ['G#4', 1], ['B4', 1], ['C5', 3],
+  ['E4', 1], ['E5', 1], ['D#5', 1], ['E5', 1], ['D#5', 1], ['E5', 1], ['B4', 1], ['D5', 1], ['C5', 1], ['A4', 3],
+];
+const EIGHTH_MS = 190;
+const PIANO_FADE_DELAY_MS = 1000; // keyboard lingers this long after the last note
+const WHITE_KEYS = ['C4', 'D4', 'E4', 'F4', 'G4', 'A4', 'B4', 'C5', 'D5', 'E5'];
+// Black keys sit on the boundary after the white key at this index.
+const BLACK_KEYS = [['C#4', 0], ['D#4', 1], ['F#4', 3], ['G#4', 4], ['A#4', 5], ['C#5', 7], ['D#5', 8]];
+const KW = 11; // white key width
+const KH = 34; // white key height
+
+export function PianoPlay() {
+  const [active, setActive] = useState(null);
+  const [fading, setFading] = useState(false);
+  useEffect(() => {
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    const timers = [];
+    let t = 150;
+    for (const [note, len] of FUR_ELISE) {
+      timers.push(setTimeout(() => setActive(note), t));
+      // release slightly early so repeated notes (E5 D#5 E5) visibly re-strike
+      timers.push(setTimeout(() => setActive((n) => (n === note ? null : n)), t + len * EIGHTH_MS - 40));
+      t += len * EIGHTH_MS;
+    }
+    timers.push(setTimeout(() => setFading(true), t + PIANO_FADE_DELAY_MS));
+    return () => timers.forEach(clearTimeout);
+  }, []);
+
+  return (
+<svg className={fading ? 'piano-play fading' : 'piano-play'} viewBox={`-1 -1 ${WHITE_KEYS.length * KW + 2} ${KH + 2}`} width="112" height="36" aria-hidden="true">
+{WHITE_KEYS.map((n, i) => (
+<rect key={n} className={active === n ? 'pk white on' : 'pk white'} x={i * KW} y="0" width={KW} height={KH} rx="1.5"></rect>
+))}
+{BLACK_KEYS.map(([n, i]) => (
+<rect key={n} className={active === n ? 'pk black on' : 'pk black'} x={(i + 1) * KW - 3.5} y="0" width="7" height="21" rx="1"></rect>
+))}
 </svg>
   );
 }

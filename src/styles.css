@@ -200,6 +200,13 @@ p, dl, dd, ul { margin: 0; padding: 0; }
 .interest:hover .interest-head { color: var(--text); }
 .interest-label { font-size: 13px; }
 .interest-body { font-size: 14px; line-height: 1.6; color: var(--text-2); }
+/* piano hover: small keyboard in the card's top-right, keys glow as Für Elise plays */
+.piano-play { position: absolute; right: 0; top: var(--s-2); z-index: 1; pointer-events: none; overflow: visible; transition: opacity 0.4s; }
+.piano-play.fading { opacity: 0; }
+.pk { stroke: var(--line); stroke-width: 0.8; transition: fill 0.18s, filter 0.18s; }
+.pk.white { fill: #1c1d1a; }
+.pk.black { fill: var(--bg); }
+.pk.on { fill: var(--amber); filter: drop-shadow(0 0 3px var(--amber)); transition: none; }
 .stat { display: block; font-size: 20px; color: var(--text); margin-bottom: 4px; }
 
 /* contact */

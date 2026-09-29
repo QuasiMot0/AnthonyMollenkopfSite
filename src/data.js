@@ -75,12 +75,12 @@ export const projects = [
   },
 ];
 
-// `anim` picks a hover animation: 'wave' or 'cube'. `body` may contain links (see Interests.jsx).
+// `anim` picks a hover animation: 'wave', 'cube' or 'piano'. `body` may contain links (see Interests.jsx).
 export const interests = [
   { id: 'golf', icon: 'golf', label: 'golf', body: 'Spent 2024–25 on the grounds crew at Victoria National, a top-50 U.S. course.' },
   { id: 'sports', icon: 'soccer', label: 'sports', body: 'Played soccer and still keep up with the Premier League as a Manchester City fan. Pole vaulted in high school and still follow the pros.' },
   { id: 'cube', icon: 'cube', label: 'speedcubing', anim: 'cube', stat: 'PR 15.086 s', body: "The hobby behind the Rubik's cube move tracker." },
-  { id: 'piano', icon: 'piano', label: 'piano', body: [
+  { id: 'piano', icon: 'piano', label: 'piano', anim: 'piano', body: [
     'I was learning to read sheet music and figured there had to be a better way to practice, so I built ',
     { href: '#inference', text: 'SightPlay' }, '.',
   ] },
