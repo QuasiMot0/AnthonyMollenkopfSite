@@ -27,6 +27,17 @@ npm run dev      # http://localhost:5173
 - Replace the placeholder project drawings with real screenshots.
 - Make the GDRankingGame repo public so its link works.
 
+## SEO
+
+Title, description, link-preview tags, structured data (schema.org `Person`) and `robots.txt`
+are set up in `index.html` and `vite.config.js`. Set your public address once and the build
+also adds the canonical URL, absolute preview-image URLs and a `sitemap.xml`:
+
+- in `vite.config.js` (`SITE_URL`), or
+- as an environment variable `SITE_URL=https://yourdomain.com` (Vercel: Project → Settings → Environment Variables).
+
+The preview image is `public/og-image.png` (1200×630).
+
 ## Deploy
 
 **Vercel (easiest):** push this folder to a GitHub repo, then import it at vercel.com/new.

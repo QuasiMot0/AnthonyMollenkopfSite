@@ -63,6 +63,11 @@ p, dl, dd, ul { margin: 0; padding: 0; }
 .body-sm { font-size: 14px; line-height: 1.6; color: var(--text-2); }
 .measure { max-width: 62ch; }
 
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
 /* animations */
 @keyframes sweep { 0% { top: 0%; opacity: 0; } 10% { opacity: 0.5; } 90% { opacity: 0.5; } 100% { top: 100%; opacity: 0; } }
 @keyframes draw { 0% { clip-path: inset(0 100% 100% 0); } 50% { clip-path: inset(0 0 100% 0); } 100% { clip-path: inset(0 0 0 0); } }

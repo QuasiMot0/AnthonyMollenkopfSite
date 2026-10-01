@@ -28,7 +28,10 @@ export function Hero() {
       <div className="hero-box">
         <div className="draw hero-frame" aria-hidden="true" />
         <div className="draw hero-label mono">person: anthony_mollenkopf · 0.99</div>
-        <h1>Anthony</h1>
+        {/* Full name for search engines and screen readers; only "Anthony" is shown. */}
+        <h1>
+          Anthony<span className="sr-only"> Mollenkopf</span>
+        </h1>
       </div>
       <p className="lede">
         CS student at Purdue building real-time computer vision systems. Perceptions Lead for the Sphero Swarm Club.
