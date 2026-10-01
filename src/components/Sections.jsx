@@ -36,7 +36,7 @@ export function Hero() {
       <dl className="status mono">
         <div>
           <dt>status</dt>
-          <dd>open to computer vision &amp; ML internships</dd>
+          <dd>open to internships</dd>
         </div>
         <div>
           <dt>currently</dt>
