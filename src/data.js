@@ -25,7 +25,7 @@ export const projects = [
     tag: 'CV · pose + tracking',
     title: "Rubik's Cube Tracker",
     body: "Reconstructs full cube state from a webcam alone, using a custom YOLOv8-pose model, solvePnP and MediaPipe hand tracking. Kociemba's algorithm fills in moves hidden by occlusion.",
-    link: { href: 'https://github.com/QuasiMot0/CV_Rubiks_Cube', label: 'view on github →' },
+    // link: { href: 'https://github.com/QuasiMot0/CV_Rubiks_Cube', label: 'view on github →' }, // repo is private for now
     placeholder: '[replace with tracker frame]',
     edge: EDGE,
     rgb: rgb({ sky: '#1B1C1A', a: '#E9E6DC', b: '#C8412F', c: '#2E62C9', g: '#0D0E0C' }),
